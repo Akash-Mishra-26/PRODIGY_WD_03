@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: blueviolet;
+  background-image: linear-gradient(62deg, #8ec 0%, #e03cfc 100%);
+  font-family: sans-serif;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1.5rem 0;
+}
+
+.heading, .winner-head {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.box {
+  height: 140px;
+  width: 140px;
+  background-color: #8ec;
+  border-radius: 1.25rem;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  font-family: sans-serif;
+  font-size: 5rem;
+  font-weight: 600;
+  color: #e03cfc;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px, 32px, 72px;
+}
+
+.box-container {
+  display: grid;
+  grid-template-columns: repeat(3, 140px);
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.reset, .new-game {
+  border: 0;
+  outline: none;
+  background-color: darkmagenta;
+  color: #fff;
+  padding: .5rem 1.5rem;
+  font-size: 1.3rem;
+  border-radius: 1rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  cursor: pointer;
+  box-shadow: rgba(197, 18, 18, 0.684) 0px 2px 40px 4px;
+}
+
+.msg-container {
+  display: flex;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  align-items: center;
+  justify-content: center;
+  width: 85vw;
+  height: 3vh;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 8ox 12px  rgb(0, 0, 0, 0.3);
+}
+
+.hide {
+  display: none;
+}
+
+@media  screen and (max-width: 1200px) {
+  .msg-container {
+    width: 80px;
+  }
+
+  .winner-head{
+    font-size: 2,5rem;
+  }
+
+  .reset {
+    padding: .5rem 8rem;
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  .winner-head {
+    font-size: 2.25rem;
+  }
+
+  .msg-container{
+    height: 12vh;
+  }
+
+  .new-game {
+    font-size: 1.25rem;
+  }
+  
+}
+
+@media screen and (max-width: 810px) {
+  .winner-head {
+    font-size: 1.65rem;
+  }
+
+  .new-game {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 630px){
+  .msg-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 16vh;
+    width: 73vw;
+    gap: .5rem;
+  }
+  
+}
+
+@media screen and (max-width: 500px) {
+  .msg-container {
+    width: 80vw;
+  }
+
+  .winner-head{
+    font-size: 1.5rem;
+  }
+
+  .new-game {
+    font-size: .90rem;
+  }
+
+  .box {
+    height: 120px;
+    width: 120px;
+    font-size: 4.5rem;
+  }
+
+  .box-container {
+    grid-template-columns: repeat(3, 120px);
+    gap: .5rem;
+  }
+  
+}
+
+@media screen and (max-width: 415px){
+  .winner-head{
+    font-size: 1.25rem
+  }
+
+  .new-game {
+    font-size: .75rem;
+    padding: .4rem 1rem;
+  }
+
+  .box {
+    height: 100px;
+    width: 100px;
+    font-size: 4rem;
+  }
+
+  .box-container{
+    grid-template-columns: repeat(3, 100px);
+    gap: .5rem;
+  }
+
+  .reset {
+    font-size: 1.35rem;
+  }
+  
+}
